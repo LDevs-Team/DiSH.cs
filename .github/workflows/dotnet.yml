@@ -23,9 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run:  dotnet publish -c Release -o ../publish -r linux-x64 --self-contained true /p:UseAppHost=true
-    - name: Generate artifact
-      uses: actions/upload-artifact@v4.3.1
-      with:
-        name: "Self-Contained"
-        path: "../publish"
+      run:  dotnet publish -c Release -o ../publish -r windows-x64 --self-contained true /p:UseAppHost=true
+    - name: Run tree
+      run: tree .
