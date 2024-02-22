@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v4.3.1
       with:
         name: "Release"
-        path: "bin\Release\net8.0\*"
+        path: "bin/Release/net8.0/*"
