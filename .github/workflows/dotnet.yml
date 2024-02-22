@@ -26,3 +26,11 @@ jobs:
       run:  dotnet publish -c Release -o publish -r win-x64 --self-contained true
     - name: Run tree
       run: tree .
+    - name: Run ls
+      run: ls DiSH.cs/bin/Release/net8.0/win-x64
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+    # Artifact name
+        name: "Release"
+        path: "DiSH.cs/bin/Release/net8.0/win-x64"
