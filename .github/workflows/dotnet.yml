@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run:  dotnet publish -c Release -o ../publish -r windows-x64 --self-contained true /p:UseAppHost=true
+      run:  dotnet publish -c Release -o ../publish -r win-x64 --self-contained true /p:UseAppHost=true
     - name: Run tree
       run: tree .
